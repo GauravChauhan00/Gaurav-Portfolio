@@ -113,7 +113,7 @@ export const projects = [
       'Structured the backend as a proper pipeline with status tracking at each stage, so if email delivery fails, the report is still saved and accessible from history. Used FastAPI\'s dependency injection for auth middleware, keeping endpoint protection consistent throughout the app.',
     learnings:
       'Learned how to build end-to-end automation pipelines — async file handling, token-based auth flows, PDF generation from processed data, and SMTP integration. This project brought together frontend, backend, and data processing in a way that felt like building a real product.',
-    githubUrl: '',
+    githubUrl: 'https://github.com/GauravChauhan00/Noctra-Grid-Relay',
     liveUrl: '',
     screenshots: [
       '/images/projects/noctra-grid-relay/cover.svg',
