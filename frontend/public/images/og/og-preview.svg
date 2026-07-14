@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#050816"/><stop offset=".55" stop-color="#0b1020"/><stop offset="1" stop-color="#1d1449"/></linearGradient>
+    <linearGradient id="g" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".15" stroke="#94a3b8"><path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200"/><path d="M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630"/></g>
+  <circle cx="980" cy="160" r="170" fill="#22d3ee" opacity=".14"/>
+  <circle cx="1040" cy="500" r="220" fill="#8b5cf6" opacity=".14"/>
+  <rect x="70" y="80" width="1060" height="470" rx="42" fill="rgba(255,255,255,.055)" stroke="rgba(255,255,255,.16)"/>
+  <text x="130" y="245" fill="#f8fafc" font-family="Inter, Arial" font-size="74" font-weight="900">Gaurav &lt;/&gt;</text>
+  <text x="130" y="320" fill="url(#g)" font-family="Inter, Arial" font-size="40" font-weight="700">Data Analyst · Data Quality Analyst · Web Developer</text>
+  <text x="130" y="390" fill="#cbd5e1" font-family="Inter, Arial" font-size="27">Clean data. Reliable APIs. Business-ready reporting. Modern web experiences.</text>
+  <text x="130" y="465" fill="#94a3b8" font-family="Inter, Arial" font-size="25">github.com/GauravChauhan00</text>
+</svg>

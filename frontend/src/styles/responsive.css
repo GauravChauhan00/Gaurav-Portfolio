@@ -1,0 +1,188 @@
+@media (max-width: 1080px) {
+  .hero__grid,
+  .about__grid,
+  .contact__grid,
+  .project-hero,
+  .case-split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__visual {
+    min-height: 460px;
+  }
+
+  .hero-scene {
+    min-height: 460px;
+  }
+
+  .certificates-grid,
+  .education-grid,
+  .projects-grid,
+  .achievement-grid,
+  .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --nav-height: 68px;
+  }
+
+  .section-shell {
+    width: min(100% - 28px, var(--max-width));
+  }
+
+  .section-pad {
+    padding: 44px 0;
+  }
+
+  .navbar {
+    top: 10px;
+    border-color: var(--border);
+    background: rgba(5, 8, 22, 0.78);
+    backdrop-filter: blur(20px);
+  }
+
+  html[data-theme='light'] .navbar {
+    background: rgba(255, 255, 255, 0.82);
+  }
+
+  .navbar__links {
+    position: fixed;
+    top: calc(var(--nav-height) + 20px);
+    right: 14px;
+    left: 14px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background: var(--surface-strong);
+    box-shadow: var(--shadow);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__links a {
+    padding: 14px;
+  }
+
+  .navbar__menu {
+    display: inline-flex;
+  }
+
+  .theme-toggle span {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 122px;
+  }
+
+  .terminal-card {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .cert-tabs-grid,
+  .education-grid,
+  .skills-grid,
+  .projects-grid,
+  .certificates-grid,
+  .course-grid,
+  .achievement-grid,
+  .case-grid,
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 7px;
+  }
+
+  .timeline-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-left: 30px;
+  }
+
+  .timeline-card__content::before {
+    left: -30px;
+  }
+
+  .certificate-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .certificates-list {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-row__top {
+    gap: 8px;
+  }
+
+  .certificate-row__meta {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__content h1 {
+    font-size: clamp(3rem, 18vw, 4.5rem);
+  }
+
+  .hero__actions,
+  .project-hero__actions,
+  .hero__socials,
+  .filter-row,
+  .certificate-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .small-btn {
+    width: 100%;
+  }
+
+  .about__content,
+  .contact__panel,
+  .contact-form,
+  .project-hero,
+  .modal {
+    padding: 20px;
+  }
+
+  .about__facts,
+  .form-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card,
+  .bundle-list__item {
+    display: block;
+  }
+
+  .bundle-list__actions {
+    margin-top: 12px;
+  }
+
+  .project-hero h1 {
+    font-size: 2.6rem;
+  }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1f2a55"/>
+      <stop offset="48%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <g opacity="0.24" stroke="#94a3b8" stroke-width="1">
+    <path d="M0 150H900M0 300H900M0 450H900M0 600H900M0 750H900"/>
+    <path d="M150 0V900M300 0V900M450 0V900M600 0V900M750 0V900"/>
+  </g>
+  <circle cx="450" cy="340" r="132" fill="rgba(255,255,255,0.06)" stroke="url(#stroke)" stroke-width="6" filter="url(#glow)"/>
+  <path d="M250 735c28-143 116-214 200-214s172 71 200 214" fill="rgba(255,255,255,0.06)" stroke="url(#stroke)" stroke-width="6" filter="url(#glow)"/>
+  <text x="450" y="790" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="#f8fafc">Gaurav &lt;/&gt;</text>
+  <text x="450" y="845" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" fill="#94a3b8">Data Analyst · Web Developer</text>
+</svg>

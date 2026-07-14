@@ -1,0 +1,54 @@
+import nodemailer from 'nodemailer';
+import { env } from '../config/env.js';
+
+export async function sendContactEmail({ name, email, subject, message }) {
+  if (!env.emailUser || !env.emailPass) {
+    console.warn('Email service configuration missing. Email notification not sent.');
+    return null;
+  }
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: env.emailUser,
+      pass: env.emailPass.replace(/\s/g, '')
+    }
+  });
+
+  const mailOptions = {
+    from: `"Portfolio Contact Form" <${env.emailUser}>`,
+    to: env.receiverEmail || env.emailUser,
+    subject: `New Inquiry: ${subject}`,
+    text: `You have received a new inquiry from your portfolio website.
+    
+Name: ${name}
+Email: ${email}
+Subject: ${subject}
+Message:
+${message}`,
+    html: `
+      <div style="font-family: sans-serif; padding: 20px; line-height: 1.5; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 12px; background-color: #ffffff;">
+        <h2 style="color: #6366f1; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; margin-top: 0;">New Contact Form Inquiry</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+          <tr>
+            <td style="padding: 6px 0; font-weight: bold; width: 100px; color: #4b5563;">Name:</td>
+            <td style="padding: 6px 0; color: #1f2937;">${name}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; font-weight: bold; color: #4b5563;">Email:</td>
+            <td style="padding: 6px 0; color: #1f2937;"><a href="mailto:${email}" style="color: #6366f1; text-decoration: none;">${email}</a></td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; font-weight: bold; color: #4b5563;">Subject:</td>
+            <td style="padding: 6px 0; color: #1f2937;">${subject}</td>
+          </tr>
+        </table>
+        <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0;" />
+        <p style="font-weight: bold; color: #4b5563; margin-bottom: 8px;">Message:</p>
+        <div style="background-color: #f9fafb; padding: 15px; border-radius: 8px; border: 1px solid #e5e7eb; font-style: italic; color: #374151; white-space: pre-wrap;">${message}</div>
+      </div>
+    `
+  };
+
+  return transporter.sendMail(mailOptions);
+}
