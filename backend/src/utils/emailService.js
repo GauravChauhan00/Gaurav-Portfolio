@@ -10,7 +10,7 @@ async function sendViaResend({ name, email, subject, message }) {
   // - "from" must be "onboarding@resend.dev"
   // - "to" must be your registered email address (env.receiverEmail or env.emailUser)
   const fromEmail = 'onboarding@resend.dev';
-  const toEmail = env.receiverEmail || env.emailUser;
+  const toEmail = (env.receiverEmail || env.emailUser || '').toLowerCase();
 
   console.log('Sending Resend email to:', toEmail);
 
