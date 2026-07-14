@@ -1,6 +1,9 @@
+import dns from 'dns';
 import app from './app.js';
 import { env } from './config/env.js';
 import { initializeDatabase } from './database/initDatabase.js';
+
+dns.setDefaultResultOrder('ipv4first');
 
 async function startServer() {
   await initializeDatabase();
