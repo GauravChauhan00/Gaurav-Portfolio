@@ -10,16 +10,20 @@ export default function ProjectCard({ project }) {
 
   return (
     <MagneticCard className="project-card">
-      <div className="project-card__media">
-        {image && <img src={image} alt={`${project.title} preview`} loading="lazy" />}
-        <div className="project-card__status">{project.status}</div>
-      </div>
+      <Link to={`/projects/${project.id}`} className="project-card__media-link">
+        <div className="project-card__media">
+          {image && <img src={image} alt={`${project.title} preview`} loading="lazy" />}
+          <div className="project-card__status">{project.status}</div>
+        </div>
+      </Link>
       <div className="project-card__body">
         <div className="project-card__meta">
           <Badge>{project.category}</Badge>
           <span>{project.year}</span>
         </div>
-        <h3>{project.title}</h3>
+        <Link to={`/projects/${project.id}`} className="project-card__title-link">
+          <h3>{project.title}</h3>
+        </Link>
         <p>{project.shortDescription}</p>
         <div className="tech-list">
           {project.technologies.slice(0, 5).map((tech) => (

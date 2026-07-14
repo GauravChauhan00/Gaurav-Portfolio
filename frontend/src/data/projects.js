@@ -2,113 +2,124 @@ export const projects = [
   {
     id: 'grocery-management-store',
     title: 'Grocery Management Store',
-    subtitle: 'Inventory and Sales Reporting System',
+    subtitle: 'Full-Stack Inventory & Sales Management System',
     category: 'Full Stack Web App',
     year: '2025',
     status: 'Completed',
     featured: true,
     shortDescription:
-      'Database-backed grocery management application for product catalog, inventory tracking, billing, sales reporting, authentication, and CRUD workflows.',
+      'A full-stack grocery store management app with admin dashboard, product inventory, sales processing, automated stock updates, and CSV-exportable reports — built with React, Flask, and SQLite.',
     overview:
-      'A practical grocery management system designed to help store teams manage products, track inventory, process billing, and understand sales activity through structured reports.',
+      'Built a complete admin system for a grocery store that handles everything from adding products to recording sales and generating reports. The idea was to replace the typical manual tracking (pen-paper or basic Excel) with a proper digital solution. Any store owner can plug in their own data and manage their inventory from a clean dashboard.',
     problem:
-      'Small store workflows can become scattered when inventory, billing, and reporting are handled manually. The project focuses on keeping product, billing, and sales data organized in one place.',
+      'Small grocery stores often track inventory and sales manually, which leads to stock discrepancies, missed low-stock alerts, and no clear picture of what\'s selling. This project addresses those day-to-day operational problems with a structured, automated system.',
     features: [
-      'Product catalog and inventory management',
-      'Billing and sales tracking workflows',
-      'Authentication flow for controlled access',
-      'CRUD operations for product/store data',
-      'Sales reporting view for better visibility'
+      'Admin dashboard with KPI cards — total products, inventory value, low-stock alerts, sales summary',
+      'Product and category management with search, filter by category, and stock status (In Stock / Low Stock / Out of Stock)',
+      'Sales recording that auto-calculates total amount and deducts stock in the same transaction',
+      'Overselling prevention — validation blocks quantity greater than available stock',
+      'Daily, weekly, monthly sales reports with date range filter and CSV export',
+      'Charts for recent sales trends and stock distribution',
+      'Auto database setup on first run with sample data — beginner-friendly setup',
+      'REST API-driven architecture — React frontend talks to Flask backend cleanly'
     ],
-    technologies: ['React.js', 'JavaScript', 'MySQL', 'HTML5', 'CSS3'],
-    role: 'Web Developer / Full-Stack Project Contributor',
+    technologies: ['React.js', 'Vite', 'JavaScript', 'Python', 'Flask', 'SQLite', 'REST API', 'CSS3'],
+    role: 'Full-Stack Developer',
     challenges:
-      'Keeping inventory, billing, and sales information synchronized while maintaining a clean interface for non-technical users.',
+      'Making sure stock deduction and sale recording happen atomically — if one fails, the other should not go through. Also designing a clean UI that a non-technical store owner could actually use without training.',
     solution:
-      'Designed data-driven screens and CRUD flows so store records can be updated consistently and reporting can be generated from structured data.',
+      'Used SQLite transactions to wrap sale insertion and stock deduction together, so data stays consistent. Kept the UI simple — card-based dashboard, clear status badges on products, and one-click report export without any complex steps.',
     learnings:
-      'Improved understanding of database-backed application flows, state-driven UI, CRUD operations, and business-friendly reporting.',
+      'Got hands-on with Flask REST API design, SQLite transactions, React state management across multiple pages, and how to build a product that\'s actually usable by someone who\'s not a developer.',
     githubUrl: '',
     liveUrl: '',
     screenshots: [
       '/images/projects/grocery-management-store/cover.svg',
       '/images/projects/grocery-management-store/screenshot-1.svg'
     ],
-    tags: ['Inventory', 'Billing', 'CRUD', 'Reporting', 'Web App']
+    tags: ['Full Stack', 'Inventory', 'Flask', 'React', 'SQLite', 'Dashboard']
   },
   {
     id: 'customer-support-analysis',
     title: 'Customer Support SLA Analysis',
-    subtitle: 'Ticket Analytics Application',
+    subtitle: 'End-to-End Data Analytics & Business Intelligence Project',
     category: 'Data Analytics',
     year: '2025',
     status: 'Completed',
     featured: true,
     shortDescription:
-      'Support ticket analytics project focused on cleaning customer support data, measuring SLA compliance, tracking KPIs, and finding bottlenecks.',
+      'A complete data analytics pipeline — from raw CSV cleaning to SLA metrics, KPI tracking, SQL analysis, and Power BI-ready outputs — built in Python and Jupyter Notebook.',
     overview:
-      'An analytics project that studies customer support ticket data to measure SLA performance, identify high-volume issue categories, and uncover operational bottlenecks.',
+      'This project takes a messy synthetic customer support dataset and turns it into actionable business insights. The entire workflow runs in Jupyter Notebook — data cleaning, SLA calculation, EDA, SQL queries, chart generation, and finally a set of dashboard-ready outputs for Power BI. The goal was to find which teams and issue categories breach SLA the most, where resolution is slowest, and what\'s impacting customer satisfaction.',
     problem:
-      'Support teams need reliable visibility into ticket delays, SLA misses, issue categories, and performance trends. Raw support data often needs cleaning before it becomes useful.',
+      'Support teams generate massive amounts of ticket data, but raw CSVs with missing values, duplicates, and inconsistencies are practically useless for reporting. Without a proper pipeline, managers can\'t tell which teams are struggling, what\'s causing SLA misses, or where CSAT is dropping.',
     features: [
-      'Data cleaning and preparation workflow',
-      'SLA compliance measurement',
-      'Ticket category and priority analysis',
-      'KPI reporting for support performance',
-      'Power BI-ready insights and dashboard structure'
+      'Data cleaning pipeline — handles missing values, invalid rows, duplicates, and data type issues using Pandas',
+      'Rejected records saved separately with reasons — for data quality audit trail',
+      'SLA compliance metrics — first response time, resolution time, SLA breach % per team and category',
+      'Team-wise and issue-category-wise performance breakdown',
+      'Weekly ticket volume trends and reopening rate analysis',
+      'Average CSAT score analysis across priority levels and issue types',
+      'SQL queries (SQLite) for aggregation, grouping, CASE-based logic — interview-ready demonstrations',
+      'Auto-generated charts (matplotlib/seaborn) ready for Power BI or presentation use',
+      'CSV export of cleaned dataset and Power BI connection guide included'
     ],
-    technologies: ['Python', 'SQL', 'Power BI', 'Excel', 'Data Cleaning'],
+    technologies: ['Python', 'Pandas', 'SQL', 'SQLite', 'Jupyter Notebook', 'Power BI', 'Matplotlib', 'Seaborn', 'Excel'],
     role: 'Data Analyst',
     challenges:
-      'Preparing support ticket data for reliable analysis and making performance indicators easy to interpret.',
+      'Designing a cleaning pipeline that could handle different types of dirty data (nulls, wrong formats, out-of-range values) while keeping a clear record of what was dropped and why. Also making the outputs usable directly in Power BI without further manual prep.',
     solution:
-      'Cleaned and structured ticket data, used SQL/Python for analysis, and organized KPIs around SLA compliance, issue category patterns, and support bottlenecks.',
+      'Built a modular cleaning script with validation rules for each field, exported rejected rows with reason codes, and structured the final output in a format that Power BI can connect to directly. SQL queries were written to mirror what a real analyst would run in a business setting.',
     learnings:
-      'Strengthened skills in data preparation, KPI thinking, SLA analysis, and business-focused dashboard storytelling.',
+      'Understood how real data pipelines work beyond just running a few Pandas commands — specifically around data quality, audit trails, business KPI logic, and making analysis actually consumable by non-technical stakeholders.',
     githubUrl: '',
     liveUrl: '',
     screenshots: [
       '/images/projects/customer-support-analysis/cover.svg',
       '/images/projects/customer-support-analysis/screenshot-1.svg'
     ],
-    tags: ['SLA', 'Analytics', 'KPIs', 'Power BI', 'SQL']
+    tags: ['Data Analytics', 'Python', 'SLA', 'Power BI', 'SQL', 'EDA', 'KPI']
   },
   {
     id: 'noctra-grid-relay',
-    title: 'Noctra Grid Relay',
-    subtitle: 'Developer Grid & Relay Workflow Project',
-    category: 'Web Development / Automation',
+    title: 'NoctraGrid Relay',
+    subtitle: 'Spreadsheet Automation & Report Delivery Platform',
+    category: 'Full Stack Web App',
     year: '2025',
-    status: 'Details Ready to Update',
+    status: 'Completed',
     featured: true,
     shortDescription:
-      'A premium project card and detail page prepared for Noctra Grid Relay. Add the final GitHub, live demo, screenshots, and technical notes in projects.js.',
+      'A full-stack automation platform where users upload Excel/CSV files, the system cleans the data, generates a professional PDF report, and emails it automatically — built with React, FastAPI, and Python.',
     overview:
-      'Noctra Grid Relay is included as a known project with a dedicated premium case-study page. The exact project details can be updated from the central projects data file without touching main UI components.',
+      'NoctraGrid Relay is built around one core idea — upload a spreadsheet, get a clean PDF report in your inbox, no manual work needed. The platform handles the full pipeline: file upload, data cleaning with Pandas, PDF generation with ReportLab, and automated email delivery via SMTP. It also includes JWT-based authentication, a report history dashboard, and an analytics module to track system usage.',
     problem:
-      'Final problem statement is intentionally kept editable because detailed project information was not provided yet.',
+      'Teams that work with Excel and CSV data regularly spend hours cleaning files, building summary reports, and then manually emailing them to stakeholders. This is repetitive, error-prone, and scales poorly. NoctraGrid Relay eliminates that entire manual loop.',
     features: [
-      'Dedicated project card and detail route',
-      'Ready-to-update project overview fields',
-      'GitHub and live demo button support',
-      'Screenshot/gallery support',
-      'Technology badge system'
+      'Excel and CSV file upload with server-side storage and processing',
+      'Automated data cleaning — missing values, duplicates, formatting issues handled via Pandas + OpenPyXL',
+      'Cleaned data exportable back to Excel or CSV for download',
+      'Professional PDF report generation using ReportLab — cleaned data, summary stats, and analysis in one document',
+      'Automatic email delivery — PDF report sent to registered email via SMTP right after generation',
+      'JWT-based authentication — secure registration, login, and protected API endpoints',
+      'Report history dashboard — all previously generated reports accessible and re-downloadable',
+      'Analytics dashboard — tracks total uploads, reports generated, and user activity',
+      'SQLAlchemy ORM for database management — users, files, reports, and activity logs all tracked'
     ],
-    technologies: ['JavaScript', 'React.js', 'Web Development', 'Automation Ready'],
-    role: 'Web Developer / Project Owner',
+    technologies: ['React.js', 'Vite', 'FastAPI', 'Python', 'SQLAlchemy', 'JWT', 'Pandas', 'OpenPyXL', 'ReportLab', 'SMTP', 'SQLite'],
+    role: 'Full-Stack Developer',
     challenges:
-      'Final project-specific challenges can be added once the project documentation and screenshots are ready.',
+      'Coordinating the multi-step backend pipeline — file upload → cleaning → PDF generation → email — so that each step handles failures gracefully without leaving the user stuck with an incomplete state. Also making JWT auth work cleanly across the React frontend and FastAPI backend.',
     solution:
-      'The portfolio already includes a clean update system for adding the final Noctra Grid Relay case study content, screenshots, and links.',
+      'Structured the backend as a proper pipeline with status tracking at each stage, so if email delivery fails, the report is still saved and accessible from history. Used FastAPI\'s dependency injection for auth middleware, keeping endpoint protection consistent throughout the app.',
     learnings:
-      'Use this project slot to present technical decision-making, UI/UX decisions, backend/API work, automation logic, or analytics outcomes after final details are available.',
+      'Learned how to build end-to-end automation pipelines — async file handling, token-based auth flows, PDF generation from processed data, and SMTP integration. This project brought together frontend, backend, and data processing in a way that felt like building a real product.',
     githubUrl: '',
     liveUrl: '',
     screenshots: [
       '/images/projects/noctra-grid-relay/cover.svg',
       '/images/projects/noctra-grid-relay/screenshot-1.svg'
     ],
-    tags: ['Developer', 'Relay', 'Grid', 'Case Study', 'Update Ready']
+    tags: ['Automation', 'FastAPI', 'React', 'PDF Generation', 'Email', 'Full Stack', 'Python']
   }
 ];
 
