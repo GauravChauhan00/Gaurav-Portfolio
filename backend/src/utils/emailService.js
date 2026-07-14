@@ -1,3 +1,4 @@
+import dns from 'dns/promises';
 import nodemailer from 'nodemailer';
 import { env } from '../config/env.js';
 
@@ -7,8 +8,24 @@ export async function sendContactEmail({ name, email, subject, message }) {
     return null;
   }
 
+  let host = 'smtp.gmail.com';
+  try {
+    const addresses = await dns.resolve4('smtp.gmail.com');
+    if (addresses && addresses.length > 0) {
+      host = addresses[0];
+      console.log(`Resolved smtp.gmail.com to IPv4: ${host}`);
+    }
+  } catch (dnsErr) {
+    console.warn('DNS IPv4 resolution failed, falling back to hostname:', dnsErr);
+  }
+
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: host,
+    port: 465,
+    secure: true,
+    tls: {
+      servername: 'smtp.gmail.com'
+    },
     auth: {
       user: env.emailUser,
       pass: env.emailPass.replace(/\s/g, '')
