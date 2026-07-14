@@ -18,5 +18,6 @@ export const env = {
   adminToken: process.env.ADMIN_TOKEN || '',
   emailUser: process.env.EMAIL_USER || '',
   emailPass: process.env.EMAIL_PASS || '',
-  receiverEmail: process.env.RECEIVER_EMAIL || ''
+  receiverEmail: process.env.RECEIVER_EMAIL || '',
+  resendApiKey: process.env.RESEND_API_KEY || ''
 };
