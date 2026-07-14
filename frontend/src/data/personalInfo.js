@@ -1,6 +1,6 @@
 export const personalInfo = {
   legalName: 'Gaurav',
-  displayName: 'Gaurav </>',
+  displayName: 'Gaurav',
   shortName: 'Gaurav',
   title: 'Data Analyst | Data Quality Analyst | Web Developer',
   heroRole: 'Data Analyst & Web Developer',
