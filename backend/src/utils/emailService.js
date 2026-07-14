@@ -12,6 +12,8 @@ async function sendViaResend({ name, email, subject, message }) {
   const fromEmail = 'onboarding@resend.dev';
   const toEmail = env.receiverEmail || env.emailUser;
 
+  console.log('Sending Resend email to:', toEmail);
+
   if (!toEmail) {
     throw new Error('Receiver email (RECEIVER_EMAIL or EMAIL_USER) is not configured.');
   }
