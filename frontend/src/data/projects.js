@@ -31,7 +31,7 @@ export const projects = [
       'Used SQLite transactions to wrap sale insertion and stock deduction together, so data stays consistent. Kept the UI simple — card-based dashboard, clear status badges on products, and one-click report export without any complex steps.',
     learnings:
       'Got hands-on with Flask REST API design, SQLite transactions, React state management across multiple pages, and how to build a product that\'s actually usable by someone who\'s not a developer.',
-    githubUrl: '',
+    githubUrl: 'https://github.com/GauravChauhan00/Grainex-Grocery-Management-System',
     liveUrl: '',
     screenshots: [
       '/images/projects/grocery-management-store/cover.svg',
@@ -72,7 +72,7 @@ export const projects = [
       'Built a modular cleaning script with validation rules for each field, exported rejected rows with reason codes, and structured the final output in a format that Power BI can connect to directly. SQL queries were written to mirror what a real analyst would run in a business setting.',
     learnings:
       'Understood how real data pipelines work beyond just running a few Pandas commands — specifically around data quality, audit trails, business KPI logic, and making analysis actually consumable by non-technical stakeholders.',
-    githubUrl: '',
+    githubUrl: 'https://github.com/GauravChauhan00/Customer-Support-SLA-Analysis',
     liveUrl: '',
     screenshots: [
       '/images/projects/customer-support-analysis/cover.svg',
