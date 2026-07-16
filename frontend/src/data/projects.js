@@ -84,7 +84,12 @@ export const projects = [
     liveUrl: '',
     screenshots: [
       '/images/projects/customer-support-analysis/cover.svg',
-      '/images/projects/customer-support-analysis/screenshot-1.svg'
+      '/images/projects/customer-support-analysis/screenshot-1.svg',
+      '/images/projects/customer-support-analysis/sla_compliance_by_team.png',
+      '/images/projects/customer-support-analysis/top_support_categories.png',
+      '/images/projects/customer-support-analysis/weekly_ticket_volume.png',
+      '/images/projects/customer-support-analysis/kpi_summary_table.png',
+      '/images/projects/customer-support-analysis/team_performance_table.png'
     ],
     tags: ['Data Analytics', 'Python', 'SLA', 'Power BI', 'SQL', 'EDA', 'KPI']
   },
@@ -125,7 +130,18 @@ export const projects = [
     liveUrl: '',
     screenshots: [
       '/images/projects/noctra-grid-relay/cover.svg',
-      '/images/projects/noctra-grid-relay/screenshot-1.svg'
+      '/images/projects/noctra-grid-relay/screenshot-1.svg',
+      '/images/projects/noctra-grid-relay/1.png',
+      '/images/projects/noctra-grid-relay/2.png',
+      '/images/projects/noctra-grid-relay/3.png',
+      '/images/projects/noctra-grid-relay/4.png',
+      '/images/projects/noctra-grid-relay/5.png',
+      '/images/projects/noctra-grid-relay/6.png',
+      '/images/projects/noctra-grid-relay/7.png',
+      '/images/projects/noctra-grid-relay/8.png',
+      '/images/projects/noctra-grid-relay/9.png',
+      '/images/projects/noctra-grid-relay/10.png',
+      '/images/projects/noctra-grid-relay/11.png'
     ],
     tags: ['Automation', 'FastAPI', 'React', 'PDF Generation', 'Email', 'Full Stack', 'Python']
   },
