@@ -1,9 +1,10 @@
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 
 export default function GalleryModal({ title, images = [], onClose }) {
   if (!images.length) return null;
 
-  return (
+  return createPortal(
     <div className="modal-backdrop" role="dialog" aria-modal="true">
       <div className="modal modal--gallery">
         <button type="button" className="modal__close" onClick={onClose} aria-label="Close project gallery">
@@ -19,6 +20,7 @@ export default function GalleryModal({ title, images = [], onClose }) {
           ))}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
