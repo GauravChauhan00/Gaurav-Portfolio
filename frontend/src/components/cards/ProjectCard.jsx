@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { ArrowUpRight, Github, Globe2, Images } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Badge from '../common/Badge';
 import MagneticCard from '../common/MagneticCard';
+import GalleryModal from '../modals/GalleryModal';
 
 export default function ProjectCard({ project }) {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const hasGithub = Boolean(project.githubUrl);
   const hasLive = Boolean(project.liveUrl);
   const image = project.screenshots?.[0];
@@ -41,12 +44,24 @@ export default function ProjectCard({ project }) {
             <Globe2 size={16} /> Live
           </a>
           {project.screenshots?.length > 0 && (
-            <span className="icon-link icon-link--quiet">
+            <button
+              className="icon-link"
+              type="button"
+              onClick={() => setIsGalleryOpen(true)}
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+            >
               <Images size={16} /> Gallery
-            </span>
+            </button>
           )}
         </div>
       </div>
+      {isGalleryOpen && (
+        <GalleryModal
+          title={project.title}
+          images={project.screenshots}
+          onClose={() => setIsGalleryOpen(false)}
+        />
+      )}
     </MagneticCard>
   );
 }
