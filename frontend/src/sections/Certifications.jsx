@@ -14,6 +14,7 @@ export default function Certifications() {
   const [category, setCategory] = useState('All');
   const [activeCertificate, setActiveCertificate] = useState(null);
   const [activeBundle, setActiveBundle] = useState(null);
+  const [lastOpenBundle, setLastOpenBundle] = useState(null);
 
   // Total courses helper
   const totalBundleCourses = useMemo(() => {
@@ -124,12 +125,27 @@ export default function Certifications() {
         </div>
       )}
 
-      <CertificateModal certificate={activeCertificate} onClose={() => setActiveCertificate(null)} />
+      <CertificateModal
+        certificate={activeCertificate}
+        onClose={() => {
+          setActiveCertificate(null);
+          if (lastOpenBundle) {
+            setTimeout(() => {
+              setActiveBundle(lastOpenBundle);
+              setLastOpenBundle(null);
+            }, 50);
+          }
+        }}
+      />
       <CourseCertificateModal
         bundle={activeBundle}
-        onClose={() => setActiveBundle(null)}
+        onClose={() => {
+          setActiveBundle(null);
+          setLastOpenBundle(null);
+        }}
         onViewCertificate={(certificate) => {
           // Close bundle modal first, then open certificate preview on top
+          setLastOpenBundle(activeBundle);
           setActiveBundle(null);
           setTimeout(() => setActiveCertificate({ ...certificate, issuer: activeBundle?.platform }), 50);
         }}
