@@ -34,8 +34,16 @@ export const projects = [
     githubUrl: 'https://github.com/GauravChauhan00/Grainex-Grocery-Management-System',
     liveUrl: '',
     screenshots: [
-      '/images/projects/grocery-management-store/cover.svg',
-      '/images/projects/grocery-management-store/screenshot-1.svg'
+      '/images/projects/grocery-management-store/1.png',
+      '/images/projects/grocery-management-store/2.png',
+      '/images/projects/grocery-management-store/3.png',
+      '/images/projects/grocery-management-store/4.png',
+      '/images/projects/grocery-management-store/5.png',
+      '/images/projects/grocery-management-store/6.png',
+      '/images/projects/grocery-management-store/7.png',
+      '/images/projects/grocery-management-store/8.png',
+      '/images/projects/grocery-management-store/9.png',
+      '/images/projects/grocery-management-store/10.png'
     ],
     tags: ['Full Stack', 'Inventory', 'Flask', 'React', 'SQLite', 'Dashboard']
   },
