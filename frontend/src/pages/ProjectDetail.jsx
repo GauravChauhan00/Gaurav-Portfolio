@@ -105,6 +105,18 @@ export default function ProjectDetail() {
         </div>
       </section>
 
+      {project.screenshots && project.screenshots.length > 0 && (
+        <section className="case-card" style={{ marginTop: '24px' }}>
+          <h2>Project Screenshot Gallery</h2>
+          <p style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>Click any image to open the full-screen slideshow.</p>
+          <div className="gallery-grid" style={{ cursor: 'zoom-in' }} onClick={() => setIsGalleryOpen(true)}>
+            {project.screenshots.map((image, idx) => (
+              <img key={image} src={image} alt={`${project.title} screenshot ${idx + 1}`} />
+            ))}
+          </div>
+        </section>
+      )}
+
       {isGalleryOpen && (
         <GalleryModal title={project.title} images={project.screenshots} onClose={() => setIsGalleryOpen(false)} />
       )}
