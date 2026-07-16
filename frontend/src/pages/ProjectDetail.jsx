@@ -12,6 +12,7 @@ export default function ProjectDetail() {
   const { projectId } = useParams();
   const project = getProjectById(projectId);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   if (!project) {
     return (
@@ -109,16 +110,30 @@ export default function ProjectDetail() {
         <section className="case-card" style={{ marginTop: '24px' }}>
           <h2>Project Screenshot Gallery</h2>
           <p style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>Click any image to open the full-screen slideshow.</p>
-          <div className="gallery-grid" style={{ cursor: 'zoom-in' }} onClick={() => setIsGalleryOpen(true)}>
+          <div className="gallery-grid">
             {project.screenshots.map((image, idx) => (
-              <img key={image} src={image} alt={`${project.title} screenshot ${idx + 1}`} />
+              <img
+                key={image}
+                src={image}
+                alt={`${project.title} screenshot ${idx + 1}`}
+                style={{ cursor: 'zoom-in' }}
+                onClick={() => {
+                  setActiveImageIndex(idx);
+                  setIsGalleryOpen(true);
+                }}
+              />
             ))}
           </div>
         </section>
       )}
 
       {isGalleryOpen && (
-        <GalleryModal title={project.title} images={project.screenshots} onClose={() => setIsGalleryOpen(false)} />
+        <GalleryModal
+          title={project.title}
+          images={project.screenshots}
+          initialIndex={activeImageIndex}
+          onClose={() => setIsGalleryOpen(false)}
+        />
       )}
     </motion.main>
   );
