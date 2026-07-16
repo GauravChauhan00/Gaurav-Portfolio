@@ -83,8 +83,6 @@ export const projects = [
     githubUrl: 'https://github.com/GauravChauhan00/Customer-Support-SLA-Analysis',
     liveUrl: '',
     screenshots: [
-      '/images/projects/customer-support-analysis/cover.svg',
-      '/images/projects/customer-support-analysis/screenshot-1.svg',
       '/images/projects/customer-support-analysis/sla_compliance_by_team.png',
       '/images/projects/customer-support-analysis/top_support_categories.png',
       '/images/projects/customer-support-analysis/weekly_ticket_volume.png',
@@ -129,8 +127,6 @@ export const projects = [
     githubUrl: 'https://github.com/GauravChauhan00/Noctra-Grid-Relay',
     liveUrl: '',
     screenshots: [
-      '/images/projects/noctra-grid-relay/cover.svg',
-      '/images/projects/noctra-grid-relay/screenshot-1.svg',
       '/images/projects/noctra-grid-relay/1.png',
       '/images/projects/noctra-grid-relay/2.png',
       '/images/projects/noctra-grid-relay/3.png',
