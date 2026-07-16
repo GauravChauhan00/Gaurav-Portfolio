@@ -11,7 +11,7 @@ import ProjectDetail from './pages/ProjectDetail';
 const getInitialTheme = () => {
   const savedTheme = localStorage.getItem('portfolio-theme');
   if (savedTheme) return savedTheme;
-  return 'dark';
+  return 'light';
 };
 
 export default function App() {

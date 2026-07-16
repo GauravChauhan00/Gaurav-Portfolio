@@ -1,7 +1,7 @@
 export const siteConfig = {
   siteName: 'Gaurav </>',
   siteTitle: 'Gaurav </> | Data Analyst & Web Developer',
-  defaultTheme: 'dark',
+  defaultTheme: 'light',
   accentLabel: 'Cyber Luxe Data Portfolio',
   navLinks: [
     { label: 'About', href: '#about' },
