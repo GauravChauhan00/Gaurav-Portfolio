@@ -126,8 +126,8 @@ export const projects = [
     title: 'Cinematic Interactive Proposal',
     subtitle: '3D WebGL Narrative & Motion Experience',
     category: 'Creative Web Experience',
-    year: '2025',
-    status: 'Completed',
+    year: '2026',
+    status: 'Ongoing',
     featured: true,
     shortDescription:
       'A premium, highly interactive full-stack web application designed to demonstrate advanced frontend engineering, WebGL 3D graphics, and complex motion design—built with Next.js, React Three Fiber, GSAP, and Tailwind CSS.',
@@ -150,11 +150,15 @@ export const projects = [
       'Lazy-loaded the canvas components, throttled frame-loop listeners, and implemented clean mounting hooks to defer dynamic calculations until client-side hydration completed.',
     learnings:
       'Gained deep experience in 3D graphic rendering loops, motion path math, serverless route handling, scroll normalization, and optimizing resource-intensive websites for production.',
-    githubUrl: 'https://github.com/GauravChauhan00/Magic-Proposal-Website',
+    githubUrl: '',
     liveUrl: '',
     screenshots: [
-      '/images/projects/magic-proposal-website/cover.svg',
-      '/images/projects/magic-proposal-website/screenshot-1.svg'
+      '/images/projects/magic-proposal-website/cover.jpg',
+      '/images/projects/magic-proposal-website/screenshot-1.jpg',
+      '/images/projects/magic-proposal-website/screenshot-2.jpg',
+      '/images/projects/magic-proposal-website/screenshot-3.jpg',
+      '/images/projects/magic-proposal-website/screenshot-4.jpg',
+      '/images/projects/magic-proposal-website/screenshot-5.jpg'
     ],
     tags: ['WebGL', 'Next.js', 'Three.js', 'GSAP', 'Framer Motion', 'Tailwind CSS', 'TypeScript']
   }
