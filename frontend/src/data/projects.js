@@ -96,7 +96,7 @@ export const projects = [
     title: 'NoctraGrid Relay',
     subtitle: 'Spreadsheet Automation & Report Delivery Platform',
     category: 'Full Stack Web App',
-    year: '2025',
+    year: '2026',
     status: 'Completed',
     featured: true,
     shortDescription:
