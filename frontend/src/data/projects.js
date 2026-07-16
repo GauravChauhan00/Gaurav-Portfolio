@@ -120,6 +120,43 @@ export const projects = [
       '/images/projects/noctra-grid-relay/screenshot-1.svg'
     ],
     tags: ['Automation', 'FastAPI', 'React', 'PDF Generation', 'Email', 'Full Stack', 'Python']
+  },
+  {
+    id: 'magic-proposal-website',
+    title: 'Cinematic Interactive Proposal',
+    subtitle: '3D WebGL Narrative & Motion Experience',
+    category: 'Creative Web Experience',
+    year: '2025',
+    status: 'Completed',
+    featured: true,
+    shortDescription:
+      'A premium, highly interactive full-stack web application designed to demonstrate advanced frontend engineering, WebGL 3D graphics, and complex motion design—built with Next.js, React Three Fiber, GSAP, and Tailwind CSS.',
+    overview:
+      'This project integrates dynamic 3D elements, smooth momentum scrolling, serverless APIs, and vector animations into a seamless, high-performance narrative. It serves as a technical showcase for modern creative development, showing how custom animation libraries and WebGL canvases can be integrated into Next.js Server-Side Rendered (SSR) architectures while maintaining a consistent 60 FPS.',
+    problem:
+      'Animation-heavy websites often suffer from performance bottlenecks, high interaction latency, and layout shifts. This project solves these performance challenges through dynamic lazy loading, scroll normalization, and state synchronization.',
+    features: [
+      'Interactive 3D crystals and particles rendered in real-time using React Three Fiber and Three.js',
+      'Normalized smooth scrolling across touchpads, mice, and mobile screens via Lenis Scroll integration',
+      'Dynamic travel route path animations built with SVG Bezier curves synchronized with Framer Motion scroll hooks',
+      'Next.js Serverless Route Handlers to securely log user responses and persist client state',
+      'SSR-compatible date calculations and timelines configured to prevent React hydration mismatch errors'
+    ],
+    technologies: ['Next.js', 'React.js', 'TypeScript', 'Three.js', 'React Three Fiber', 'GSAP', 'Framer Motion', 'Lenis Scroll', 'Tailwind CSS'],
+    role: 'Creative Web Engineer',
+    challenges:
+      'Ensuring heavy 3D canvases and complex scroll-triggered vector paths render at a stable 60 FPS across standard mobile devices, alongside handling Next.js server-side hydration mismatches.',
+    solution:
+      'Lazy-loaded the canvas components, throttled frame-loop listeners, and implemented clean mounting hooks to defer dynamic calculations until client-side hydration completed.',
+    learnings:
+      'Gained deep experience in 3D graphic rendering loops, motion path math, serverless route handling, scroll normalization, and optimizing resource-intensive websites for production.',
+    githubUrl: 'https://github.com/GauravChauhan00/Magic-Proposal-Website',
+    liveUrl: '',
+    screenshots: [
+      '/images/projects/magic-proposal-website/cover.svg',
+      '/images/projects/magic-proposal-website/screenshot-1.svg'
+    ],
+    tags: ['WebGL', 'Next.js', 'Three.js', 'GSAP', 'Framer Motion', 'Tailwind CSS', 'TypeScript']
   }
 ];
 
